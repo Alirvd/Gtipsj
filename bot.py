@@ -212,11 +212,11 @@ def search_function(message, city):
 def search_name_handler(message, city):
 	name=message.text
 	if city=="number":
-		bot.reply_to(message, "الرجاء الانتضار...)
+		bot.reply_to(message, "الرجاء الانتضار...")
 		return
 	try:
 		nameg=name.split(' ')[1]
-		w_msg=bot.reply_to(message, "الرجاء الانتضار...)
+		w_msg=bot.reply_to(message, "الرجاء الانتضار...")
 		search_info_by_name(w_msg, name, city)
 	except IndexError:
 		bot.reply_to(message, "اسم غير صحيح", reply_markup=back_to_cities_menu)
