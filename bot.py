@@ -135,7 +135,7 @@ def broadcast_function(message):
 	bot.register_next_step_handler(br_msg, broadcast_message_handler)
 
 def broadcast_message_handler(message):
-	wait_msg=bot.reply_to(message, "جاري الاذاعة، "الرجاء الانتضار...")
+	wait_msg=bot.reply_to(message, "جاري الاذاعة الرجاء الانتضار...")
 	broadcast_message=message.text
 	users_ids=open('ids.txt').read().splitlines()
 	done_sent_count=0
