@@ -383,7 +383,7 @@ def find_familly_function(message):
 	connection = sqlite3.connect(f'db/{str(city)}.db')
 	connection.text_factory = str
 	cursor = connection.cursor()
-	bot.edit_message_text(chat_id=message.chat.id, message_id=message.id, text=""الرجاء الانتضار...", reply_markup=back_to_cities_menu)
+	bot.edit_message_text(chat_id=message.chat.id, message_id=message.id, text="الرجاء الانتضار...", reply_markup=back_to_cities_menu)
 	query = f"SELECT fam_no, p_first, p_father, p_grand, p_birth, {str(town_var)} FROM person WHERE fam_no LIKE '{fam_num}%'"
 	cursor.execute(query)
 	rows = cursor.fetchall()
@@ -479,7 +479,7 @@ def add_user_function(message):
 
 
 def add_user_id_handler(message):
-	msg=bot.reply_to(message, ""الرجاء الانتضار...")
+	msg=bot.reply_to(message, "الرجاء الانتضار...")
 	user_id=message.text
 	lst=[]
 	f=open('users.txt', 'r').read().splitlines()
@@ -507,7 +507,7 @@ def delete_user_function(message):
 
 
 def delete_user_id_handler(message):
-	msg=bot.reply_to(message, "الرجاء الانتضار...)
+	msg=bot.reply_to(message, "الرجاء الانتضار...")
 	user_id=message.text
 	lst=[]
 	f=open('users.txt', 'r').read().splitlines()
